@@ -1,10 +1,10 @@
-package com.rgb.springboothexagonalkafka;
+package com.rgb.infrastructure;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootHexagonalKafkaApplicationTests {
+class InfrastructureApplicationTests {
 
 	@Test
 	void contextLoads() {

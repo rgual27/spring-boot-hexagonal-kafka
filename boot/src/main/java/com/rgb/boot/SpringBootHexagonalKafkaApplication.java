@@ -1,4 +1,4 @@
-package com.rgb.springboothexagonalkafka;
+package com.rgb.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
