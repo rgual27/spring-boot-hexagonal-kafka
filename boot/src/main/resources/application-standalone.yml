@@ -1,0 +1,4 @@
+com.rgb.kafka.bootstrap-server-config: localhost:29092
+topic:
+  customer:
+    name: rgb.local.customer.v1

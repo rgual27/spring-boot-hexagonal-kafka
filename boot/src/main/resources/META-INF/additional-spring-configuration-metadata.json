@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "com.rgb.kafka.botstrap-server-config",
+      "type": "java.lang.String",
+      "description": "Bootstrap Server host:port."
+  }
+] }
