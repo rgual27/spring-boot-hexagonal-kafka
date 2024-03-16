@@ -1,0 +1,8 @@
+com.rgb.kafka.bootstrap-server-config: localhost:29092
+topic:
+  customer:
+    name: rgb.local.customer.v1
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongo_primary:27017,mongo_secondary1:27017,mongo_secondary2:27017/db?readPreference=secondaryPreferred&replicaSet=rs0
