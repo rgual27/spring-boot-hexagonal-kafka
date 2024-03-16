@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -20,3 +20,21 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+  mongo_primary:
+    image: mongo:latest
+    container_name: mongo_primary
+    ports:
+      - "27017:27017"
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+  mongo_secondary1:
+    image: mongo:latest
+    container_name: mongo_secondary1
+    ports:
+      - "27018:27017"
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+  mongo_secondary2:
+    image: mongo:latest
+    container_name: mongo_secondary2
+    ports:
+      - "27019:27017"
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]

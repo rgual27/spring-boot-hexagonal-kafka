@@ -4,9 +4,8 @@ import com.rgb.entity.Customer;
 
 import java.util.List;
 
-public interface CustomerService {
-
-    Customer save(Customer customer) throws Exception;
+public interface CustomerRepository {
+    Customer save(Customer customer);
 
     List<Customer> findAll();
 }

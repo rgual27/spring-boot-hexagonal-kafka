@@ -26,6 +26,9 @@ public class CustomerEventServiceImpl implements CustomerEventService {
 
     @Override
     public void publish(Customer customer) {
+        log.info("Publishing Customer event ... with id={}, data={}",
+                customer.getId(),
+                customer);
         CustomerEvent customerEvent = new CustomerEvent();
         customerEvent.setData(customer);
         customerEvent.setId(UUID.randomUUID().toString());
